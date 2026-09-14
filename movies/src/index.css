@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d131d;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.header {
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 50px;
+
+  background: #101720;
+
+  border-bottom: 1px solid #1d2632;
+}
+
+.logo {
+  font-size: 17px;
+  font-weight: 600;
+  color: #dce1e8;
+}
+
+
+.search-box {
+  width: 230px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  background: #181f2a;
+
+  border-radius: 5px;
+}
+
+.search-box span {
+  color: #8b95a5;
+  margin-right: 8px;
+}
+
+
+.search-box input {
+  width: 100%;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  color: white;
+
+  font-size: 11px;
+}
+
+.search-box input::placeholder {
+  color: #747e8e;
+}
+
+
+/* MAIN */
+
+.container {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 45px 30px 80px;
+}
+
+
+/* SECTION */
+
+.movie-section {
+  margin-bottom: 55px;
+}
+
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+
+.section-header h2,
+.categories-section h2 {
+  font-size: 20px;
+  font-weight: 500;
+
+  color: #d7dce4;
+}
+
+
+.section-header span {
+  font-size: 8px;
+
+  color: #8a94a3;
+
+  letter-spacing: 1px;
+}
+
+
+/* MOVIE GRID */
+
+.movie-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+
+/* MOVIE CARD */
+
+.movie-wrapper {
+  min-width: 0;
+}
+
+
+.movie-card {
+  width: 100%;
+
+  aspect-ratio: 0.72 / 1;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  border: 1px solid #202938;
+
+  transition: 0.3s;
+}
+
+
+.movie-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #3b4657;
+}
+
+
+.movie-poster {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  padding: 15px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.8),
+      transparent
+    );
+}
+
+
+.movie-poster h3 {
+  text-align: center;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255,0.8);
+}
+
+
+.movie-title {
+  margin-top: 10px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  color: #d9dee6;
+}
+
+
+.movie-info {
+  margin-top: 5px;
+
+  font-size: 8px;
+
+  color: #858f9e;
+}
+
+
+.rating {
+  margin-top: 7px;
+
+  font-size: 9px;
+
+  color: #d6ad36;
+}
+
+
+/* CATEGORIES */
+
+.categories-section {
+  margin-bottom: 35px;
+}
+
+
+.categories-section h2 {
+  margin-bottom: 15px;
+}
+
+
+.categories {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.categories button {
+  border: none;
+
+  padding: 6px 15px;
+
+  background: #181f29;
+
+  color: #8f98a6;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.categories button:hover {
+  background: #293443;
+
+  color: white;
+}
+
+
+/* POSTER COLORS */
+
+.inception {
+  background:
+    linear-gradient(
+      150deg,
+      #274658,
+      #162631,
+      #090d12
+    );
+}
+
+
+.interstellar {
+  background:
+    radial-gradient(
+      circle at 60% 30%,
+      #d39c66,
+      transparent 20%
+    ),
+    linear-gradient(
+      145deg,
+      #121b27,
+      #303848
+    );
+}
+
+
+.dune {
+  background:
+    linear-gradient(
+      150deg,
+      #7e3e1b,
+      #d67a30,
+      #21130f
+    );
+}
+
+
+.parasite {
+  background:
+    linear-gradient(
+      180deg,
+      #18394a,
+      #203333,
+      #111517
+    );
+}
+
+
+.dark-knight {
+  background:
+    linear-gradient(
+      145deg,
+      #1c3d4c,
+      #152630,
+      #090b10
+    );
+}
+
+
+.pulp-fiction {
+  background:
+    linear-gradient(
+      145deg,
+      #754a30,
+      #201818,
+      #121316
+    );
+}
+
+
+.spirited {
+  background:
+    linear-gradient(
+      145deg,
+      #15526b,
+      #9b7349,
+      #242630
+    );
+}
+
+
+.spider {
+  background:
+    linear-gradient(
+      180deg,
+      #172d4d,
+      #2d1c3f,
+      #681936
+    );
+}
+
+
+.blade-runner {
+  background:
+    linear-gradient(
+      145deg,
+      #4e271b,
+      #df7021,
+      #191112
+    );
+}
+
+
+.whiplash {
+  background:
+    linear-gradient(
+      145deg,
+      #080a0c,
+      #5b3b1b
+    );
+}
+
+
+.budapest {
+  background:
+    linear-gradient(
+      180deg,
+      #79a1c1,
+      #c4d2da 40%,
+      #d6a8a2
+    );
+}
+
+
+.mad-max {
+  background:
+    linear-gradient(
+      145deg,
+      #252030,
+      #a85b2d,
+      #21150f
+    );
+}
+
+
+.arrival {
+  background:
+    linear-gradient(
+      145deg,
+      #7a8889,
+      #293335,
+      #111415
+    );
+}
+
+
+.eternal {
+  background:
+    linear-gradient(
+      145deg,
+      #7c9cac,
+      #b8d0dc,
+      #26313d
+    );
+}
+
+
+.alien {
+  background:
+    radial-gradient(
+      circle,
+      #41936b,
+      transparent 10%
+    ),
+    linear-gradient(
+      145deg,
+      #071d15,
+      #101616,
+      #000
+    );
+}
+
+
+.gladiator {
+  background:
+    linear-gradient(
+      145deg,
+      #6e3d1d,
+      #c9873c,
+      #1c120b
+    );
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 20px;
+  }
+
+
+  .search-box {
+    width: 100%;
+  }
+
+
+  .container {
+    padding: 30px 18px;
+  }
+
+
+  .movie-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* SMALL PHONE */
+
+@media (max-width: 380px) {
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
