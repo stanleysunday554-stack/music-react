@@ -37,6 +37,9 @@ function FeaturedMovies() {
               {movie.title}
             </h3>
 
+ 
+
+
 
             <p className="movie-info">
               {movie.genre} • {movie.year}
